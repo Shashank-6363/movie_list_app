@@ -1,0 +1,166 @@
+/* Page */
+.signInPage {
+    width: 1440px;
+    height: 800px;
+    background: #093545;
+    position: relative;
+}
+
+/* Card */
+.group7 {
+    width: 300px;
+    position: absolute;
+    top: 220px;
+    left: 570px;
+}
+
+/* Heading */
+.heading1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* Form */
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Input */
+.inputField {
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    padding: 0 14px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Placeholder */
+.inputField::placeholder {
+    color: #888;
+}
+
+/* Remember Me */
+.rememberMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* center horizontally */
+
+    gap: 8px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Button */
+.primaryButton {
+    width: 330px;
+    height: 50px;
+    background: #2BD17E;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+..vector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px; /* bigger height */
+  overflow: hidden;
+}
+
+ .vector1 {
+    width: 100%;
+    height: 111px;
+    background: rgba(229, 229, 229, 0.13);
+    
+    /* #E5E5E521 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #000000
+}
+
+.vector2 {
+    width: 100%;
+    height: 111px;
+    background: rgba(32, 223, 127, 0.09);
+    /* #20DF7F17 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #000000
+    
+} 
+
+
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* First wave */
+.wave1 {
+  top: 0;
+  z-index: 1;
+}
+
+/* Second wave */
+.wave2 {
+  top: 16px; /* vertical offset for overlap */
+  z-index: 2;
+}
+
+
+/* =========================
+   Responsive – Mobile
+   ========================= */
+@media (max-width: 768px) {
+
+    .signInPage {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .group7 {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .heading1 {
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 24px;
+    }
+
+    .inputField,
+    .primaryButton {
+        width: 100%;
+        height: 45px;
+    }
+
+    .rememberMe {
+        justify-content: center;
+    }
+
+     .vector {
+    width: 100%;
+  }
+}
