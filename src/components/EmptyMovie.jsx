@@ -1,11 +1,24 @@
+import { useNavigate } from "react-router-dom";
 import "./EmptyMovie.css";
 
 function EmptyMovie() {
+  const navigate = useNavigate();
+
+  const handleAddMovie = () => {
+    navigate("/movielist"); // route to MovieList page
+  };
+
   return (
     <div className="addMovieList">
       <div className="addMovieContainer">
         <h1 id="emptyMovieHeading">Your movie list is empty</h1>
-        <button className="addNewMovie">Add a new Movie</button>
+
+        <button
+          className="addNewMovie"
+          onClick={handleAddMovie}
+        >
+          Add a new Movie
+        </button>
       </div>
 
       {/* Waves at the bottom */}
