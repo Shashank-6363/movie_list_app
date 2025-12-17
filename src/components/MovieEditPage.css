@@ -1,0 +1,178 @@
+/* =====================
+   Page Layout
+   ===================== */
+.moviePage {
+  min-height: 100vh;
+  background: #093545;
+  padding: 80px 120px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* =====================
+   Heading
+   ===================== */
+#headingNewMovie {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+/* =====================
+   Main Content Layout
+   ===================== */
+.createMovieContent {
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* =====================
+   Image Upload Box
+   ===================== */
+.imageDragBox {
+  width: 473px;
+  height: 504px;
+  border: 2px dashed #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.dragInner {
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.dragInner .icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+/* =====================
+   Form Section
+   ===================== */
+.formSection {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.movieInput {
+  height: 48px;
+  border-radius: 10px;
+  padding: 0 16px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  background: #224957;
+  color: #ffffff;
+}
+
+.movieInput::placeholder {
+  color: #bfc8cc;
+}
+
+/* =====================
+   Buttons
+   ===================== */
+.buttonGroup {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+#cancelButton {
+  flex: 1;
+  height: 56px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#cancelButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#submitButton {
+  flex: 1;
+  height: 56px;
+  border-radius: 10px;
+  background: #2bd17e;
+  border: none;
+  color: #093545;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#submitButton:hover {
+  background: #26c172;
+}
+
+/* =====================
+   Waves
+   ===================== */
+.vector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wave1 {
+  top: 0;
+  z-index: 1;
+}
+
+.wave2 {
+  top: 16px;
+  z-index: 2;
+}
+
+/* =====================
+   Mobile Responsive
+   ===================== */
+@media (max-width: 768px) {
+  .moviePage {
+    padding: 40px 24px;
+  }
+
+  #headingNewMovie {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .createMovieContent {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .imageDragBox,
+  .formSection {
+    width: 100%;
+  }
+
+  .imageDragBox {
+    height: 280px;
+  }
+}

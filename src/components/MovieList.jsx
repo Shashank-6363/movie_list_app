@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import "./MovieList.css";
 
 import demoImage from "../assets/d750e5dbbde00c6980a5053ff7b3ea31cbf35361.jpg";
@@ -18,7 +18,9 @@ function MovieList() {
       {/* Header */}
       <div className="movieListHeader">
         <h3>My Movies</h3>
-        <div id="plusSign">+</div>
+        <div id="plusSign" onClick={() => navigate("/create-movie")}>
+          +
+        </div>
       </div>
 
       {/* Logout */}
@@ -28,17 +30,24 @@ function MovieList() {
 
       {/* Movie Cards */}
       <div className="movieCartList">
-        {[demoImage, demoImage1, demoImage2, demoImage, demoImage1, demoImage2, demoImage, demoImage1].map(
-          (img, index) => (
-            <div className="movieCart" key={index}>
-              <img className="movieImage" src={img} alt="Movie" />
-              <div className="movieInfo">
-                <p className="movieTitle">Movie {index + 1}</p>
-                <p className="movieYear">2001</p>
-              </div>
+        {[
+          demoImage,
+          demoImage1,
+          demoImage2,
+          demoImage,
+          demoImage1,
+          demoImage2,
+          demoImage,
+          demoImage1,
+        ].map((img, index) => (
+          <div className="movieCart" key={index}>
+            <img className="movieImage" src={img} alt="Movie" />
+            <div className="movieInfo">
+              <p className="movieTitle">Movie {index + 1}</p>
+              <p className="movieYear">2001</p>
             </div>
-          )
-        )}
+          </div>
+        ))}
       </div>
 
       {/* Pagination */}
@@ -51,7 +60,11 @@ function MovieList() {
 
       {/* Bottom Waves */}
       <div className="vector">
-        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" className="wave wave1">
+        <svg
+          viewBox="0 0 1440 200"
+          preserveAspectRatio="none"
+          className="wave wave1"
+        >
           <path
             d="M0 100 
                C360 0, 720 200, 1080 100
@@ -61,7 +74,11 @@ function MovieList() {
           />
         </svg>
 
-        <svg viewBox="0 0 1440 200" preserveAspectRatio="none" className="wave wave2">
+        <svg
+          viewBox="0 0 1440 200"
+          preserveAspectRatio="none"
+          className="wave wave2"
+        >
           <path
             d="M0 100 
                C360 200, 720 0, 1080 100
